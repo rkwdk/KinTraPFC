@@ -1,0 +1,6 @@
+{
+    "helloWorld":"こんにちわ世界！",
+    "@helloWorld":{
+        "description": "お決まりの挨拶"
+    }
+}
