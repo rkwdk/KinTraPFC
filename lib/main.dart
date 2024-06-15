@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 // import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:intl/intl.dart';
+// import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,112 +34,233 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Intl.defaultLocale = Localizations.localeOf(context).toString();
-    final l10n = L10n.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: const Text('NutriTrack'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.person),
+            onPressed: () {
+              // プロフィール設定画面への遷移
+            },
+          ),
+        ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const TextField(),
-            Text(
-              DateFormat.yMEd().format(DateTime.now()),
-            ),
-            Text(l10n.helloWorld),
-          ],
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              WeeklyProgressSection(),
+              SizedBox(height: 16),
+              DailyIntakeSection(),
+              SizedBox(height: 16),
+              MealLogSection(),
+              SizedBox(height: 16),
+              WeeklyGraphsSection(),
+              SizedBox(height: 16),
+              NotificationSection(),
+            ],
+          ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // 食事追加画面への遷移
+        },
+        backgroundColor: Colors.blue,
+        tooltip: 'Add Meal',
+        child: const Icon(Icons.add),
       ),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+class WeeklyProgressSection extends StatelessWidget {
+  const WeeklyProgressSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Weekly Progress',
+            style: Theme.of(context).textTheme.headlineSmall),
+        const LinearProgressIndicator(value: 0.6, color: Colors.green),
+        const SizedBox(height: 8),
+        const NutrientProgressBar(
+            nutrient: 'Carbs', value: 0.5, color: Colors.blue),
+        const NutrientProgressBar(
+            nutrient: 'Protein', value: 0.7, color: Colors.red),
+        const NutrientProgressBar(
+            nutrient: 'Fat', value: 0.3, color: Colors.yellow),
+      ],
+    );
+  }
+}
+
+class NutrientProgressBar extends StatelessWidget {
+  final String nutrient;
+  final double value;
+  final Color color;
+
+  const NutrientProgressBar(
+      {super.key,
+      required this.nutrient,
+      required this.value,
+      required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(nutrient, style: Theme.of(context).textTheme.bodyLarge),
+        LinearProgressIndicator(value: value, color: color),
+      ],
+    );
+  }
+}
+
+class DailyIntakeSection extends StatelessWidget {
+  const DailyIntakeSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Today\'s Intake',
+            style: Theme.of(context).textTheme.headlineSmall),
+        const IntakeProgressBar(
+            label: 'Calories', value: 0.8, color: Colors.orange),
+        const IntakeProgressBar(label: 'Carbs', value: 0.5, color: Colors.blue),
+        const IntakeProgressBar(
+            label: 'Protein', value: 0.6, color: Colors.red),
+        const IntakeProgressBar(label: 'Fat', value: 0.4, color: Colors.yellow),
+      ],
+    );
+  }
+}
+
+class IntakeProgressBar extends StatelessWidget {
+  final String label;
+  final double value;
+  final Color color;
+
+  const IntakeProgressBar(
+      {super.key,
+      required this.label,
+      required this.value,
+      required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(label, style: Theme.of(context).textTheme.bodyLarge),
+        LinearProgressIndicator(value: value, color: color),
+      ],
+    );
+  }
+}
+
+class MealLogSection extends StatelessWidget {
+  const MealLogSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Meal Log', style: Theme.of(context).textTheme.headlineSmall),
+        const MealLogEntry(
+            timeOfDay: 'Breakfast',
+            description: 'Oatmeal with fruits',
+            calories: 300),
+        const MealLogEntry(
+            timeOfDay: 'Lunch', description: 'Chicken salad', calories: 500),
+        const MealLogEntry(
+            timeOfDay: 'Dinner',
+            description: 'Grilled fish with veggies',
+            calories: 400),
+        const MealLogEntry(
+            timeOfDay: 'Snacks', description: 'Yogurt and nuts', calories: 200),
+      ],
+    );
+  }
+}
+
+class MealLogEntry extends StatelessWidget {
+  final String timeOfDay;
+  final String description;
+  final int calories;
+
+  const MealLogEntry(
+      {super.key,
+      required this.timeOfDay,
+      required this.description,
+      required this.calories});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: const Icon(Icons.fastfood),
+      title: Text(description),
+      subtitle: Text('$calories kcal'),
+      trailing: Text(timeOfDay),
+    );
+  }
+}
+
+class WeeklyGraphsSection extends StatelessWidget {
+  const WeeklyGraphsSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Weekly Progress',
+            style: Theme.of(context).textTheme.headlineSmall),
+        const SizedBox(
+          height: 200,
+          child: Placeholder(), // グラフウィジェットをここに配置
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ],
+    );
+  }
+}
+
+class NotificationSection extends StatelessWidget {
+  const NotificationSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Notifications', style: Theme.of(context).textTheme.headlineSmall),
+        const NotificationEntry(
+            message: 'You exceeded your calorie goal today!'),
+        const NotificationEntry(message: 'Don\'t forget to log your lunch.'),
+      ],
+    );
+  }
+}
+
+class NotificationEntry extends StatelessWidget {
+  final String message;
+
+  const NotificationEntry({super.key, required this.message});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: const Icon(Icons.notification_important),
+      title: Text(message),
     );
   }
 }
