@@ -1,16 +1,10 @@
-# nutri_meter
+仕事も落ち着いてきたので、flutterアプリで作成してみる。
 
-A new Flutter project.
+初期開発の参考資料は下記です。
 
-## Getting Started
+https://speakerdeck.com/mthiroshi/android-neiteibu-shi-zhuang-apurino-flutter-hua-shi-li
 
-This project is a starting point for a Flutter application.
+https://zenn.dev/zudah228/articles/336e5eb1cf8888#3.-%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%81%AE%E5%88%86%E5%89%B2
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/hukusuke1007/flutter_app_template
