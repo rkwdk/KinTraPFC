@@ -1,13 +1,17 @@
-仕事も落ち着いてきたので、flutterアプリで作成してみる。
+仕事も落ち着いてきたので、flutterアプリ作成してみようと思う。
+まずテンプーレートプロジェクトを作っておく。
+getXは商用では利用されてなさそうなので、riverpodを使おう。
 
-作る動機
-ダイエットのカロリー管理が気になってきたのと、firebaseをちゃんと使ってみたいので、
-その二つに対応してみる。
+やってみること
+バージョン管理:fvm
+状態管理:hooks_riverpod
+バックエンド:firebase
+ローカルDB:Isar
+WebView:flutter_inappwebview
 
-「PFCログ」が完璧すぎだが、栄養素管理もしてみたい。
-「マイフィットネスパル」が月500円でほぼ理想的だけど、自作アプリでどこまで近づけるかを挑戦してみる。
 
-初期開発の参考資料は下記です。
+参考資料と環境のメモ。
+
 
 https://speakerdeck.com/mthiroshi/android-neiteibu-shi-zhuang-apurino-flutter-hua-shi-li
 
@@ -48,3 +52,28 @@ https://qiita.com/yuki-okamoto-13/items/0b30b62ca18638589c32
 これが効果ありそう。
 sudo gem update
 完璧、gemが古かったんや
+
+https://ente.io/blog/tech/sqlite-objectbox-isar/
+
+ライブラリ集
+https://sogablog.net/2023/06/27/%E3%80%90flutter%E3%80%91flutter-widget-%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E7%B4%B9%E4%BB%8B/
+https://qiita.com/allJokin/items/69c25cda015572ba89e8
+
+WebView比較
+https://zenn.dev/taku_zenn/articles/a7ef926c73ec3d
+
+privacy manifest対応とは？
+
+app_tracking_transparencyとは？
+個人情報の許可が必要らしい
+https://tech-blog.cloud-config.jp/2023-11-28-app-tracking-transparency-flutter
+
+画面遷移周り
+https://zenn.dev/koji_1009/articles/ad3e7941294e1f
+
+最新情報riverpod3
+https://zenn.dev/heyhey1028/articles/riverpod3-preview
+
+
+analysis_optionsのwaningが解決できない
+lintが変な風に適用されている？
