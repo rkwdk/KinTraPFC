@@ -1,53 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/src/features/home/widget/dailyIntake_section.dart';
-import 'package:flutter_template/src/features/home/widget/meal_log_section.dart';
-import 'package:flutter_template/src/features/home/widget/notification_section.dart';
-import 'package:flutter_template/src/features/home/widget/weekly_graphs_section.dart';
-import 'package:flutter_template/src/features/home/widget/weekly_progress_section.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+part 'home_screen.g.dart';
 
-class HomeScreen extends StatelessWidget {
+@riverpod
+String helloWorld(HelloWorldRef ref) {
+  return 'Hello world';
+}
+
+class HomeScreen extends HookConsumerWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final counter = useState(0);
+    final value = ref.watch(helloWorldProvider);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('NutriTrack'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.person),
-            onPressed: () {
-              // プロフィール設定画面への遷移
-            },
-          ),
-        ],
-      ),
-      body: const SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              WeeklyProgressSection(),
-              SizedBox(height: 16),
-              DailyIntakeSection(),
-              SizedBox(height: 16),
-              MealLogSection(),
-              SizedBox(height: 16),
-              WeeklyGraphsSection(),
-              SizedBox(height: 16),
-              NotificationSection(),
-            ],
-          ),
+      appBar: AppBar(title: const Text('Example2')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('$value ${counter.value}'),
+            ElevatedButton(
+              onPressed: () => counter.value++,
+              child: const Text('Increment'),
+            ),
+          ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // 食事追加画面への遷移
-        },
-        backgroundColor: Colors.blue,
-        tooltip: 'Add Meal',
-        child: const Icon(Icons.add),
       ),
     );
   }
