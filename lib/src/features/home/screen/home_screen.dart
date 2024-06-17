@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nutri_meter/features/home/widget/dailyIntake_section.dart';
-import 'package:nutri_meter/features/home/widget/meal_log_section.dart';
-import 'package:nutri_meter/features/home/widget/notification_section.dart';
-import 'package:nutri_meter/features/home/widget/weekly_graphs_section.dart';
-import 'package:nutri_meter/features/home/widget/weekly_progress_section.dart';
+import 'package:flutter_template/src/features/home/widget/dailyIntake_section.dart';
+import 'package:flutter_template/src/features/home/widget/meal_log_section.dart';
+import 'package:flutter_template/src/features/home/widget/notification_section.dart';
+import 'package:flutter_template/src/features/home/widget/weekly_graphs_section.dart';
+import 'package:flutter_template/src/features/home/widget/weekly_progress_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutri_meter/features/home/widget/nutrient_progress_bar.dart';
+import 'package:flutter_template/src/features/home/widget/nutrient_progress_bar.dart';
 
 class WeeklyProgressSection extends StatelessWidget {
   const WeeklyProgressSection({super.key});

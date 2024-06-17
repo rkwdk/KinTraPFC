@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutri_meter/features/home/widget/intake_progress_bar.dart';
+import 'package:flutter_template/src/features/home/widget/intake_progress_bar.dart';
 
 class DailyIntakeSection extends StatelessWidget {
   const DailyIntakeSection({super.key});

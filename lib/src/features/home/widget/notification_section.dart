@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutri_meter/features/home/widget/notification_entry.dart';
+import 'package:flutter_template/src/features/home/widget/notification_entry.dart';
 
 class NotificationSection extends StatelessWidget {
   const NotificationSection({super.key});

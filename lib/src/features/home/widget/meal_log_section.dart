@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutri_meter/features/home/widget/meal_log_entry.dart';
+import 'package:flutter_template/src/features/home/widget/meal_log_entry.dart';
 
 class MealLogSection extends StatelessWidget {
   const MealLogSection({super.key});

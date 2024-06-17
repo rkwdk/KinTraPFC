@@ -1,4 +1,4 @@
-package com.example.nutri_meter
+package com.example.flutter_template
 
 import io.flutter.embedding.android.FlutterActivity
 
