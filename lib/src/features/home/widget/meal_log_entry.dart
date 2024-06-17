@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class MealLogEntry extends StatelessWidget {
-  final String timeOfDay;
-  final String description;
-  final int calories;
 
   const MealLogEntry(
       {super.key,
       required this.timeOfDay,
       required this.description,
-      required this.calories});
+      required this.calories,});
+  final String timeOfDay;
+  final String description;
+  final int calories;
 
   @override
   Widget build(BuildContext context) {

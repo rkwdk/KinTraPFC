@@ -13,15 +13,15 @@ class MealLogSection extends StatelessWidget {
         const MealLogEntry(
             timeOfDay: 'Breakfast',
             description: 'Oatmeal with fruits',
-            calories: 300),
+            calories: 300,),
         const MealLogEntry(
-            timeOfDay: 'Lunch', description: 'Chicken salad', calories: 500),
+            timeOfDay: 'Lunch', description: 'Chicken salad', calories: 500,),
         const MealLogEntry(
             timeOfDay: 'Dinner',
             description: 'Grilled fish with veggies',
-            calories: 400),
+            calories: 400,),
         const MealLogEntry(
-            timeOfDay: 'Snacks', description: 'Yogurt and nuts', calories: 200),
+            timeOfDay: 'Snacks', description: 'Yogurt and nuts', calories: 200,),
       ],
     );
   }

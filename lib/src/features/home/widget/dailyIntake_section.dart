@@ -10,12 +10,12 @@ class DailyIntakeSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Today\'s Intake',
-            style: Theme.of(context).textTheme.headlineSmall),
+            style: Theme.of(context).textTheme.headlineSmall,),
         const IntakeProgressBar(
-            label: 'Calories', value: 0.8, color: Colors.orange),
+            label: 'Calories', value: 0.8, color: Colors.orange,),
         const IntakeProgressBar(label: 'Carbs', value: 0.5, color: Colors.blue),
         const IntakeProgressBar(
-            label: 'Protein', value: 0.6, color: Colors.red),
+            label: 'Protein', value: 0.6, color: Colors.red,),
         const IntakeProgressBar(label: 'Fat', value: 0.4, color: Colors.yellow),
       ],
     );

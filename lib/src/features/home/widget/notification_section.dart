@@ -11,7 +11,7 @@ class NotificationSection extends StatelessWidget {
       children: [
         Text('Notifications', style: Theme.of(context).textTheme.headlineSmall),
         const NotificationEntry(
-            message: 'You exceeded your calorie goal today!'),
+            message: 'You exceeded your calorie goal today!',),
         const NotificationEntry(message: 'Don\'t forget to log your lunch.'),
       ],
     );

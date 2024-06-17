@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class NutrientProgressBar extends StatelessWidget {
-  final String nutrient;
-  final double value;
-  final Color color;
 
   const NutrientProgressBar(
       {super.key,
       required this.nutrient,
       required this.value,
-      required this.color});
+      required this.color,});
+  final String nutrient;
+  final double value;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {

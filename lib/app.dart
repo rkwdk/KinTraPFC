@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_template/src/features/home/screen/home_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,16 +9,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      // localizationsDelegates: [
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate
-      // ],
-      localizationsDelegates: L10n.localizationsDelegates,
-      // supportedLocales: [
-      //   Locale('ja', 'JP'),
-      // ],
-      supportedLocales: L10n.supportedLocales,
+      localizationsDelegates: [
+        GlobalWidgetsLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
+      ],
+      // localizationsDelegates: L10n.localizationsDelegates,
+      supportedLocales: [
+        Locale('ja', 'JP'),
+      ],
+      // supportedLocales: L10n.supportedLocales,
       home: HomeScreen(),
     );
   }
