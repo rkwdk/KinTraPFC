@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_template/src/features/home/widget/meal_log_entry.dart';
 
 class MealLogSection extends StatelessWidget {
@@ -11,17 +14,25 @@ class MealLogSection extends StatelessWidget {
       children: [
         Text('Meal Log', style: Theme.of(context).textTheme.headlineSmall),
         const MealLogEntry(
-            timeOfDay: 'Breakfast',
-            description: 'Oatmeal with fruits',
-            calories: 300,),
+          timeOfDay: 'Breakfast',
+          description: 'Oatmeal with fruits',
+          calories: 300,
+        ),
         const MealLogEntry(
-            timeOfDay: 'Lunch', description: 'Chicken salad', calories: 500,),
+          timeOfDay: 'Lunch',
+          description: 'Chicken salad',
+          calories: 500,
+        ),
         const MealLogEntry(
-            timeOfDay: 'Dinner',
-            description: 'Grilled fish with veggies',
-            calories: 400,),
+          timeOfDay: 'Dinner',
+          description: 'Grilled fish with veggies',
+          calories: 400,
+        ),
         const MealLogEntry(
-            timeOfDay: 'Snacks', description: 'Yogurt and nuts', calories: 200,),
+          timeOfDay: 'Snacks',
+          description: 'Yogurt and nuts',
+          calories: 200,
+        ),
       ],
     );
   }

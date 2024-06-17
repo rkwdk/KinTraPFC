@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1005463114212",
+    "project_id": "flutter-template-acafc",
+    "storage_bucket": "flutter-template-acafc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005463114212:android:2920cd8cd464f2d51577f1",
+        "android_client_info": {
+          "package_name": "com.example.flutter_template"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5kmHQdZoYKFX8uSZ_H2SdzSQyP_Q-pg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

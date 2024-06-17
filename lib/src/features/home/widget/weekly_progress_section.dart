@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_template/src/features/home/widget/nutrient_progress_bar.dart';
 
 class WeeklyProgressSection extends StatelessWidget {
