@@ -1,1 +1,52 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"flutter-template-acafc","appId":"1:1005463114212:android:2920cd8cd464f2d51577f1","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"flutter-template-acafc","appId":"1:1005463114212:ios:075e97c02eb2a4bd1577f1","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"macos":{"default":{"projectId":"flutter-template-acafc","appId":"1:1005463114212:ios:5283f2afac4b621c1577f1","uploadDebugSymbols":false,"fileOutput":"macos/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"flutter-template-acafc","configurations":{"android":"1:1005463114212:android:2920cd8cd464f2d51577f1","ios":"1:1005463114212:ios:075e97c02eb2a4bd1577f1","macos":"1:1005463114212:ios:5283f2afac4b621c1577f1","web":"1:1005463114212:web:aefd20c8083350ca1577f1","windows":"1:1005463114212:web:79cdbaec97ff153c1577f1"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "flutter-template-acafc",
+          "appId": "1:1005463114212:android:2920cd8cd464f2d51577f1",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "flutter-template-acafc",
+          "appId": "1:1005463114212:ios:075e97c02eb2a4bd1577f1",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "flutter-template-acafc",
+          "appId": "1:1005463114212:ios:5283f2afac4b621c1577f1",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "flutter-template-acafc",
+          "configurations": {
+            "android": "1:1005463114212:android:2920cd8cd464f2d51577f1",
+            "ios": "1:1005463114212:ios:075e97c02eb2a4bd1577f1",
+            "macos": "1:1005463114212:ios:5283f2afac4b621c1577f1",
+            "web": "1:1005463114212:web:aefd20c8083350ca1577f1",
+            "windows": "1:1005463114212:web:79cdbaec97ff153c1577f1"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
+  }
+}

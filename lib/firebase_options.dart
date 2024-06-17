@@ -76,7 +76,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1005463114212',
     projectId: 'flutter-template-acafc',
     storageBucket: 'flutter-template-acafc.appspot.com',
-    iosBundleId: 'com.example.flutterTemplate',
+    iosBundleId: 'com.example.nutriMeter',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
@@ -88,4 +88,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutter-template-acafc.appspot.com',
     measurementId: 'G-D87C591QXG',
   );
+
 }
