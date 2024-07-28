@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:flutter_template/src/features/home/widget/intake_progress_bar.dart';
+import 'package:kin_tra_pfc/src/features/home/widget/intake_progress_bar.dart';
 
 class DailyIntakeSection extends StatelessWidget {
   const DailyIntakeSection({super.key});

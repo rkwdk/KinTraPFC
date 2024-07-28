@@ -47,9 +47,9 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyBNRy9EGZK--pJR9lr16U1kpyqHaF5STVo',
     appId: '1:1005463114212:web:aefd20c8083350ca1577f1',
     messagingSenderId: '1005463114212',
-    projectId: 'flutter-template-acafc',
-    authDomain: 'flutter-template-acafc.firebaseapp.com',
-    storageBucket: 'flutter-template-acafc.appspot.com',
+    projectId: 'kin-tra-pfc',
+    authDomain: 'kin-tra-pfc.firebaseapp.com',
+    storageBucket: 'kin-tra-pfc.appspot.com',
     measurementId: 'G-4HT1F5S2R2',
   );
 
@@ -57,25 +57,25 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyD5kmHQdZoYKFX8uSZ_H2SdzSQyP_Q-pg0',
     appId: '1:1005463114212:android:2920cd8cd464f2d51577f1',
     messagingSenderId: '1005463114212',
-    projectId: 'flutter-template-acafc',
-    storageBucket: 'flutter-template-acafc.appspot.com',
+    projectId: 'kin-tra-pfc',
+    storageBucket: 'kin-tra-pfc.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBpdtvfE3Li01D-zshL_SKnFV4QJA7Zs7o',
-    appId: '1:1005463114212:ios:075e97c02eb2a4bd1577f1',
-    messagingSenderId: '1005463114212',
-    projectId: 'flutter-template-acafc',
-    storageBucket: 'flutter-template-acafc.appspot.com',
-    iosBundleId: 'com.rkwdk.flutterTemplate',
+    apiKey: 'AIzaSyAXYB2G9FYgQWgoj7JjXGApWL2osNVzBh4',
+    appId: '1:250732151089:ios:35a505307cca09ff257010',
+    messagingSenderId: '250732151089',
+    projectId: 'kin-tra-pfc-2d56d',
+    storageBucket: 'kin-tra-pfc-2d56d.appspot.com',
+    iosBundleId: 'com.rkwdk.kintrapfc',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyBpdtvfE3Li01D-zshL_SKnFV4QJA7Zs7o',
     appId: '1:1005463114212:ios:5283f2afac4b621c1577f1',
     messagingSenderId: '1005463114212',
-    projectId: 'flutter-template-acafc',
-    storageBucket: 'flutter-template-acafc.appspot.com',
+    projectId: 'kin-tra-pfc',
+    storageBucket: 'kin-tra-pfc.appspot.com',
     iosBundleId: 'com.example.nutriMeter',
   );
 
@@ -83,10 +83,9 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyBNRy9EGZK--pJR9lr16U1kpyqHaF5STVo',
     appId: '1:1005463114212:web:79cdbaec97ff153c1577f1',
     messagingSenderId: '1005463114212',
-    projectId: 'flutter-template-acafc',
-    authDomain: 'flutter-template-acafc.firebaseapp.com',
-    storageBucket: 'flutter-template-acafc.appspot.com',
+    projectId: 'kin-tra-pfc',
+    authDomain: 'kin-tra-pfc.firebaseapp.com',
+    storageBucket: 'kin-tra-pfc.appspot.com',
     measurementId: 'G-D87C591QXG',
   );
-
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/app.dart';
+import 'package:kin_tra_pfc/app.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

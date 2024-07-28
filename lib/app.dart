@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_template/src/features/home/screen/home_screen.dart';
+import 'package:kin_tra_pfc/src/features/home/screen/home_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

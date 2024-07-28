@@ -11,9 +11,9 @@
 	<key>BUNDLE_ID</key>
 	<string>com.example.nutriMeter</string>
 	<key>PROJECT_ID</key>
-	<string>flutter-template-acafc</string>
+	<string>kin-tra-pfc</string>
 	<key>STORAGE_BUCKET</key>
-	<string>flutter-template-acafc.appspot.com</string>
+	<string>kin-tra-pfc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>

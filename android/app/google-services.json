@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "1005463114212",
-    "project_id": "flutter-template-acafc",
-    "storage_bucket": "flutter-template-acafc.appspot.com"
+    "project_id": "kin-tra-pfc",
+    "storage_bucket": "kin-tra-pfc.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:1005463114212:android:2920cd8cd464f2d51577f1",
         "android_client_info": {
-          "package_name": "com.example.flutter_template"
+          "package_name": "com.example.kin_tra_pfc"
         }
       },
       "oauth_client": [],
