@@ -55,6 +55,7 @@ dependencies:
   flutter_oss_licenses: ^3.0.2
   flutter_riverpod: any
   freezed: ^2.5.2
+  getwidget: ^4.0.0
   go_router: ^14.2.0
   hooks_riverpod: ^2.5.1
   import_sorter: ^4.6.0

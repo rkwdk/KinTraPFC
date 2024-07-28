@@ -5,9 +5,12 @@ getXは商用では利用されてなさそうなので、riverpodを使おう�
 やってみること
 バージョン管理:fvm
 状態管理:hooks_riverpod
+画面遷移:go_router
 バックエンド:firebase
 ローカルDB:Isar
 WebView:flutter_inappwebview
+UI: getwidget
+
 
 
 参考資料と環境のメモ。
